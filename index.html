@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html class="light" lang="th">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>QualityDisser | รับทำ Dissertation</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&family=Kanit:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#306ee8",
+                        "secondary": "#636f88",
+                        "accent": "#f59e0b",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#111621",
+                        "text-main": "#111318",
+                        "text-muted": "#636f88",
+                        "card-bg": "#ffffff",
+                        "border-color": "#e5e7eb"
+                    },
+                    fontFamily: {
+                        "display": ["Kanit", "sans-serif"],
+                        "body": ["Prompt", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        @keyframes marqueeRightToLeft {
+            0% {
+                transform: translateX(0%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        @keyframes marqueeLeftToRight {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        @keyframes marqueeRightToLeftSlow {
+            0% {
+                transform: translateX(0%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .animate-marquee-right-to-left {
+            animation: marqueeRightToLeft 20s linear infinite;
+        }
+
+        .animate-marquee-left-to-right {
+            animation: marqueeLeftToRight 20s linear infinite;
+        }
+
+        .animate-marquee-right-to-left-slow {
+            animation: marqueeRightToLeftSlow 25s linear infinite;
+        }
+    </style>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-background-light dark:bg-background-dark font-body text-text-main antialiased">
+    <!-- Top Navigation -->
+    <header class="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-md border-b border-[#f0f2f4]">
+        <div class="px-4 md:px-10 py-3 max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="size-8 bg-primary rounded-lg flex items-center justify-center text-white">
+                    <span class="material-symbols-outlined">school</span>
+                </div>
+                <h2 class="text-text-main text-xl font-bold tracking-tight">QualityDisser</h2>
+            </div>
+            <nav class="hidden md:flex items-center gap-8">
+                <a class="nav-link text-text-main text-sm font-medium hover:text-primary transition-colors" href="#services">บริการของเรา</a>
+                <a class="nav-link text-text-main text-sm font-medium hover:text-primary transition-colors" href="#why-us">ทำไมต้องเลือกเรา</a>
+                <a class="nav-link text-text-main text-sm font-medium hover:text-primary transition-colors" href="#faq">คำถามที่พบบ่อย</a>
+            </nav>
+            <div class="flex gap-3">
+                <button class="cursor-pointer items-center justify-center rounded-lg h-9 px-4 bg-primary text-white text-sm font-bold shadow-md hover:bg-primary/90 transition-colors flex gap-2" onclick="scrollToContactUs()">
+                    <span class="material-symbols-outlined text-[18px]">chat</span>
+                    <span>ติดต่อเรา</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex flex-col items-center w-full">
+        <!-- Hero Section -->
+        <section class="w-full max-w-7xl px-4 md:px-10 py-12 md:py-20 gradient-bg">
+            <div class="flex flex-col-reverse md:flex-row gap-6 md:gap-10 lg:gap-16 items-center">
+                <div class="flex flex-col gap-6 flex-1 text-left">
+                    <div class="flex flex-col gap-4 fade-in">
+                        <span class="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold w-fit">ได้รับความไว้วางใจจากนักศึกษามากกว่า 500 คน</span>
+                        <h1 class="text-text-main text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-[1.15] tracking-tight">
+                            รับทำ Dissertation ภาษาอังกฤษ โดยเฉพาะ อย่าง <span class="gradient-text">มืออาชีพ</span> เพื่อความสำเร็จของน้องๆ
+                        </h1>
+                        <p class="text-text-muted text-base sm:text-lg leading-relaxed max-w-xl">
+                            เราเป็นผู้เชี่ยวชาญและมีประสบการณ์ด้านการรับทำวิทยานิพนธ์ มีผลงานวิทยานิพนธ์ที่ได้รับการตีพิมพ์จากวารสารต่างชาติมากมาย และได้รับรางวัล Best Paper Award จากหลายประเทศชั้นนำทางยุโรปและเอเชีย อีกทั้งยังได้รับการเสนอให้เป็น Commentator งานวิทยานิพนธ์ของนักศึกษาในมหาวิทยาลัยชั้นนำ ด้วยความสำเร็จและความรู้ที่เราสั่งสมมา สามารถการันตีได้เป็นอย่างดีว่าเราเป็นผู้เชี่ยวชาญและเป็นหนึ่งทางด้านการทำวิทยานิพนธ์ เราสามารถให้คำปรึกษา ให้ความรู้ และความสำเร็จแก่ผู้ที่ประสงค์จะทำงานวิทยานิพนธ์ได้อย่างมืออาชีพ ในราคาที่ไม่แพง
+                        </p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row flex-wrap gap-4 pt-2">
+                        <button class="flex h-12 px-6 items-center justify-center rounded-lg bg-primary text-white text-base font-bold shadow-lg hover:bg-primary/90 transition-all hover:scale-[1.02] w-full sm:w-auto" onclick="scrollToContactUs()">
+                            ขอคำปรึกษาฟรี
+                        </button>
+                        <button class="flex h-12 px-6 items-center justify-center rounded-lg border border-gray-200 bg-white text-text-main text-base font-bold hover:bg-gray-50 transition-all hover:scale-[1.02] w-full sm:w-auto" onclick="scrollToTestimonials()">
+                            ดูผลตอบรับจากนักศึกษา
+                        </button>
+                    </div>
+                    <div class="mt-4 slide-up">
+                        <span class="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold w-fit">ประสบการณ์ทำงานนานกว่า 10 ปี</span>
+                    </div>
+                </div>
+                <div class="flex-1 w-full h-full relative slide-up flex justify-end">
+                    <div class="relative w-full md:w-11/12 aspect-square md:aspect-[3/2] rounded-2xl overflow-hidden shadow-2xl shadow-gray-900/20">
+                        <img src="Resource/Pic2.jpg" alt="QualityDisser Academic Services" class="w-full h-full object-cover object-right transform hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="w-full bg-card-bg py-16 md:py-24" id="services">
+            <div class="max-w-7xl mx-auto px-4 md:px-10 flex flex-col gap-10">
+                <div class="flex flex-col items-center text-center gap-3 fade-in">
+                    <span class="text-primary font-bold text-sm sm:text-base tracking-wide uppercase">ความเชี่ยวชาญของเรา QualityDisser</span>
+                    <h2 class="text-text-main text-3xl md:text-4xl font-bold">บริการทางวิชาการ</h2>
+                    <p class="text-text-muted text-base max-w-2xl">ตรงกับมาตรฐานทางวิชาการของมหาวิทยาลัย เพื่อให้คุณบรรลุผลลัพธ์ที่ดีที่สุดเท่าที่จะเป็นไปได้</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Service Cards -->
+                    <div class="group flex flex-col gap-4 p-6 rounded-xl border border-border-color bg-white shadow-sm hover:shadow-xl hover:border-primary/20 transition-all duration-300 hover-lift">
+                        <div class="size-12 rounded-lg bg-blue-50 text-primary flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl">menu_book</span>
+                        </div>
+                        <div>
+                            <h3 class="text-text-main text-lg font-bold mb-2">Research Proposal</h3>
+                            <p class="text-text-muted text-sm leading-relaxed">วางรากฐานที่มั่นคงของ Dissertation ด้วยการวิเคราะห์หาหัวข้อที่เหมาะสม และจัดโครงสร้างของ Proposal อย่างครอบคลุม</p>
+                        </div>
+                    </div>
+
+                    <div class="group flex flex-col gap-4 p-6 rounded-xl border border-border-color bg-white shadow-sm hover:shadow-xl hover:border-primary/20 transition-all duration-300 hover-lift">
+                        <div class="size-12 rounded-lg bg-purple-50 text-purple-600 flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl">description</span>
+                        </div>
+                        <div>
+                            <h3 class="text-text-main text-lg font-bold mb-2">Dissertation and Assignment</h3>
+                            <p class="text-text-muted text-sm leading-relaxed">การสนับสนุนแบบครบวงจรสำหรับ Assignment, Article และ Dissertation โดยผู้เชี่ยวชาญเฉพาะทาง</p>
+                        </div>
+                    </div>
+
+                    <div class="group flex flex-col gap-4 p-6 rounded-xl border border-border-color bg-white shadow-sm hover:shadow-xl hover:border-primary/20 transition-all duration-300 hover-lift">
+                        <div class="size-12 rounded-lg bg-green-50 text-green-600 flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl">analytics</span>
+                        </div>
+                        <div>
+                            <h3 class="text-text-main text-lg font-bold mb-2">Data Analysis</h3>
+                            <p class="text-text-muted text-sm leading-relaxed">การวิเคราะห์ทางสถิติด้วย SPSS, Stata, R และ NVivo พร้อมคำอธิบายที่ชัดเจน</p>
+                        </div>
+                    </div>
+
+                    <div class="group flex flex-col gap-4 p-6 rounded-xl border border-border-color bg-white shadow-sm hover:shadow-xl hover:border-primary/20 transition-all duration-300 hover-lift">
+                        <div class="size-12 rounded-lg bg-orange-50 text-orange-600 flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl">check_circle</span>
+                        </div>
+                        <div>
+                            <h3 class="text-text-main text-lg font-bold mb-2">Editing and Proofreading</h3>
+                            <p class="text-text-muted text-sm leading-relaxed">การแก้ไขไวยากรณ์ การปรับปรุงรูปแบบ และการปรับปรุงเนื้อหาให้อยู่ในระดับเดียวกับเจ้าของภาษาโดยผู้เชี่ยวชาญ</p>
+                        </div>
+                    </div>
+
+                    <div class="group flex flex-col gap-4 p-6 rounded-xl border border-border-color bg-white shadow-sm hover:shadow-xl hover:border-primary/20 transition-all duration-300 hover-lift">
+                        <div class="size-12 rounded-lg bg-pink-50 text-pink-600 flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl">edit_note</span>
+                        </div>
+                        <div>
+                            <h3 class="text-text-main text-lg font-bold mb-2">Academic Presentation</h3>
+                            <p class="text-text-muted text-sm leading-relaxed">การฝึกอบรมจากผู้เชี่ยวชาญเกี่ยวกับโครงสร้างและรูปแบบของน้ำเสียง การวิเคราะห์เชิงวิจารณ์ ของ Presentation ในเชิงวิชาการ</p>
+                        </div>
+                    </div>
+
+                    <div class="group flex flex-col gap-4 p-6 rounded-xl border border-border-color bg-white shadow-sm hover:shadow-xl hover:border-primary/20 transition-all duration-300 hover-lift">
+                        <div class="size-12 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl">psychology</span>
+                        </div>
+                        <div>
+                            <h3 class="text-text-main text-lg font-bold mb-2">Consultation</h3>
+                            <p class="text-text-muted text-sm leading-relaxed">พูดคุยสอบถามแบบตัวต่อตัวกับผู้เชี่ยวชาญเพื่อแนะนำเส้นทางทางวิชาการที่เหมาะสม</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class="w-full bg-background-light dark:bg-background-dark py-16 md:py-24" id="why-us">
+            <div class="max-w-7xl mx-auto px-4 md:px-10">
+                <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+                    <div class="order-2 md:order-1 relative fade-in">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-card-bg p-6 rounded-2xl shadow-lg transform translate-y-8 hover-lift">
+                                <div class="size-10 rounded-full bg-blue-100 text-primary flex items-center justify-center mb-4">
+                                    <span class="material-symbols-outlined">school</span>
+                                </div>
+                                <h3 class="font-bold text-base md:text-lg mb-2">ที่ปรึกษาผู้เชี่ยวชาญ</h3>
+                                <p class="text-xs sm:text-sm text-text-muted">บัณฑิตจากมหาวิทยาลัยชั้นนำที่เชี่ยวชาญในสาขาต่างๆ เป็นผู้ให้คำปรึกษาโดยตรง</p>
+                            </div>
+                            <div class="bg-card-bg p-6 rounded-2xl shadow-lg hover-lift">
+                                <div class="size-10 rounded-full bg-green-100 text-green-600 flex items-center justify-center mb-4">
+                                    <span class="material-symbols-outlined">verified_user</span>
+                                </div>
+                                <h3 class="font-bold text-base md:text-lg mb-2">ความลับ 100%</h3>
+                                <p class="text-xs sm:text-sm text-text-muted">ข้อมูลของคุณและตัวตนได้รับการปกป้องด้วยมาตรการความเป็นส่วนตัวที่เข้มงวด</p>
+                            </div>
+                            <div class="bg-card-bg p-6 rounded-2xl shadow-lg transform translate-y-8 hover-lift">
+                                <div class="size-10 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center mb-4">
+                                    <span class="material-symbols-outlined">lightbulb</span>
+                                </div>
+                                <h3 class="font-bold text-base md:text-lg mb-2">เน้นความเข้าใจในผลงาน</h3>
+                                <p class="text-xs sm:text-sm text-text-muted">ทีมงานมีการพูดคุยอธิบายงานให้น้องๆ มีความเข้าใจในผลงานอย่างแท้จริง สามารถอธิบายให้ Supervisor ฟังได้อย่างมั่นใจ</p>
+                            </div>
+                            <div class="bg-card-bg p-6 rounded-2xl shadow-lg hover-lift">
+                                <div class="size-10 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center mb-4">
+                                    <span class="material-symbols-outlined">schedule</span>
+                                </div>
+                                <h3 class="font-bold text-base md:text-lg mb-2">การส่งงานตรงเวลา</h3>
+                                <p class="text-xs sm:text-sm text-text-muted">ขั้นตอนการทำงานที่เป็นระบบเพื่อให้คุณไม่พลาดกำหนดส่งงาน</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-1 md:order-2 flex flex-col gap-6 slide-up">
+                        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-text-main">ทำไมต้องเลือก QualityDisser?</h2>
+                        <p class="text-base md:text-lg text-text-muted">
+                            เราเข้าใจความกดดันของชีวิตทางวิชาการ บริการของเราไม่ใช่เพียงแค่การเสร็จสิ้นงานเท่านั้น แต่เป็นการเสริมพลังให้คุณด้วยความรู้และรักษาอนาคตทางวิชาการของคุณ
+                        </p>
+                        <ul class="flex flex-col gap-4 mt-2">
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary mt-1 flex-shrink-0">check_circle</span>
+                                <span class="text-text-main font-medium text-sm sm:text-base">มีเจ้าของภาษาเป็นผู้ตรวจสอบแก้ไขขั้นสุดท้าย</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary mt-1 flex-shrink-0">check_circle</span>
+                                <span class="text-text-main font-medium text-sm sm:text-base"> มีการตรวจสอบ Plagiarism ด้วย Application ที่ได้มาตรฐาน</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary mt-1 flex-shrink-0">check_circle</span>
+                                <span class="text-text-main font-medium text-sm sm:text-base">แก้ไขตามนำแนะนำจาก Supervior เพื่อให้ได้ผลลัพท์ที่ดีที่สุด</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary mt-1 flex-shrink-0">check_circle</span>
+                                <span class="text-text-main font-medium text-sm sm:text-base">สามารถสื่อสารโดยตรงได้กับทีมงานที่ดูแลตลอดเวลา</span>
+                            </li>
+                        </ul>
+                        <button class="mt-4 flex w-fit h-12 px-8 items-center justify-center rounded-lg bg-text-main text-white text-base font-bold shadow-lg hover:bg-black transition-all hover:scale-105">
+                            เรียนรู้เพิ่มเติมเกี่ยวกับเรา
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- FAQ Section -->
+        <section class="w-full bg-card-bg py-16 md:py-24" id="faq">
+            <div class="max-w-3xl mx-auto px-4 md:px-10 flex flex-col gap-10">
+                <div class="text-center fade-in">
+                    <h2 class="text-text-main text-2xl sm:text-3xl font-bold mb-4">คำถามที่พบบ่อย</h2>
+                    <p class="text-text-muted text-base">มีคำถามหรือไม่? เรามีคำตอบ</p>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <!-- Q1 -->
+                    <details class="group bg-background-light dark:bg-[#1a1f2e] p-4 rounded-xl open:ring-1 open:ring-primary/20 transition-all">
+                        <summary class="flex justify-between items-center font-bold cursor-pointer list-none text-text-main">
+                            <span>บริการนี้เป็นความลับหรือไม่?</span>
+                            <span class="transition group-open:rotate-180">
+                                <span class="material-symbols-outlined">expand_more</span>
+                            </span>
+                        </summary>
+                        <div class="text-text-muted text-sm sm:text-base mt-3 leading-relaxed">
+                            แน่นอน เราปฏิบัติตามนโยบายการปกป้องข้อมูลอย่างเข้มงวด รายละเอียดส่วนตัวของคุณและงานที่เราผลิตให้คุณจะไม่ถูกแบ่งปันกับบุคคลที่สาม
+                        </div>
+                    </details>
+                    <!-- Q2 -->
+                    <details class="group bg-background-light dark:bg-[#1a1f2e] p-4 rounded-xl open:ring-1 open:ring-primary/20 transition-all">
+                        <summary class="flex justify-between items-center font-bold cursor-pointer list-none text-text-main">
+                            <span>ใครจะเป็นผู้ทำงานในงานที่ได้รับมอบหมายของฉัน?</span>
+                            <span class="transition group-open:rotate-180">
+                                <span class="material-symbols-outlined">expand_more</span>
+                            </span>
+                        </summary>
+                        <div class="text-text-muted text-sm sm:text-base mt-3 leading-relaxed">
+                            เราจับคู่คุณกับทีมงานที่มีปริญญาเอกหรือปริญญาโทในสาขาวิชาที่คุณศึกษาจากมหาวิทยาลัยที่มีชื่อเสียง
+                        </div>
+                    </details>
+                    <!-- Q3 -->
+                    <details class="group bg-background-light dark:bg-[#1a1f2e] p-4 rounded-xl open:ring-1 open:ring-primary/20 transition-all">
+                        <summary class="flex justify-between items-center font-bold cursor-pointer list-none text-text-main">
+                            <span>รับประกันเกรดหรือไม่?</span>
+                            <span class="transition group-open:rotate-180">
+                                <span class="material-symbols-outlined">expand_more</span>
+                            </span>
+                        </summary>
+                        <div class="text-text-muted text-sm sm:text-base mt-3 leading-relaxed">
+                            เราไม่สามารถรับประกันเกรดได้ เนื่องจากการให้คะแนนขึ้นอยู่กับ 'รสนิยม' ของ Supervior แต่ละท่าน แต่งานของเรามีคุณภาพโดยเราจะต้องได้รับความยินยอมก่อนเริ่มดำเนินงานและสนับสนุนคุณจนกว่าคุณจะพึงพอใจ
+                        </div>
+                    </details>
+                    <!-- Q4 -->
+                    <details class="group bg-background-light dark:bg-[#1a1f2e] p-4 rounded-xl open:ring-1 open:ring-primary/20 transition-all">
+                        <summary class="flex justify-between items-center font-bold cursor-pointer list-none text-text-main">
+                            <span>ถ้าฉันต้องการเปลี่ยนแปลงแก้ไขงานจะเกิดอะไรขึ้น?</span>
+                            <span class="transition group-open:rotate-180">
+                                <span class="material-symbols-outlined">expand_more</span>
+                            </span>
+                        </summary>
+                        <div class="text-text-muted text-sm sm:text-base mt-3 leading-relaxed">
+                            เมื่อได้รับการ confirm แนวทางเพิ่มเริ่มงาน เราจะเสนอการแก้ไขงานจากคำติชมของ supervisor เพื่อให้ตรงตามความคาดหวังภายในขอบเขตเดิมของงานที่ confirm ไว้ตอนแรก หากมีการแก้ไขนอกเหนือจากนั้น จะต้องเป็นไปตามที่ทาง QualityDisser กำหนด
+                        </div>
+                    </details>
+                    <!-- Q5 -->
+                    <details class="group bg-background-light dark:bg-[#1a1f2e] p-4 rounded-xl open:ring-1 open:ring-primary/20 transition-all">
+                        <summary class="flex justify-between items-center font-bold cursor-pointer list-none text-text-main">
+                            <span>ฉันจะชำระเงินอย่างไร?</span>
+                            <span class="transition group-open:rotate-180">
+                                <span class="material-symbols-outlined">expand_more</span>
+                            </span>
+                        </summary>
+                        <div class="text-text-muted text-sm sm:text-base mt-3 leading-relaxed">
+                            เรารับการโอนเงินผ่านธนาคารเท่านั้น นอกจากนี้ เราสามารถจัดทำแผนผ่อนชำระสำหรับโครงการที่ใหญ่ขึ้นได้
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="w-full bg-background-light dark:bg-background-dark py-16 md:py-24" id="testimonials">
+            <div class="max-w-7xl mx-auto px-4 md:px-10 flex flex-col gap-12">
+                <div class="flex flex-col items-center text-center gap-3 fade-in">
+                    <h2 class="text-text-main text-2xl sm:text-3xl md:text-4xl font-bold">ตัวย่างเรื่องราวความสำเร็จนักศึกษา</h2>
+                </div>
+                <div class="flex flex-col gap-8">
+                    <!-- First Row: 3 Testimonials with continuous scroll -->
+                    <div class="relative overflow-hidden">
+                        <div class="flex animate-marquee-right-to-left whitespace-nowrap">
+                            <!-- Duplicate cards to create continuous loop -->
+                            <div class="testimonial-card w-full md:w-1/3 flex-shrink-0 px-3">
+                                <div class="p-8 bg-card-bg rounded-2xl shadow-sm border border-border-color flex flex-col gap-6 h-full">
+                                    <div class="text-primary">
+                                        <span class="material-symbols-outlined text-xl sm:text-2xl">format_quote</span>
+                                    </div>
+                                    <div class="flex-grow flex items-center justify-center">
+                                        <img src="Resource/Feedback1.jpg" alt="Student Feedback" class="w-full h-full object-contain">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-card w-full md:w-1/3 flex-shrink-0 px-3">
+                                <div class="p-8 bg-card-bg rounded-2xl shadow-sm border border-border-color flex flex-col gap-6 h-full">
+                                    <div class="text-primary">
+                                        <span class="material-symbols-outlined text-xl sm:text-2xl">format_quote</span>
+                                    </div>
+                                    <div class="flex-grow flex items-center justify-center">
+                                        <img src="Resource/Feedback2.jpg" alt="Student Feedback" class="w-full h-full object-contain">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-card w-full md:w-1/3 flex-shrink-0 px-3">
+                                <div class="p-8 bg-card-bg rounded-2xl shadow-sm border border-border-color flex flex-col gap-6 h-full">
+                                    <div class="text-primary">
+                                        <span class="material-symbols-outlined text-xl sm:text-2xl">format_quote</span>
+                                    </div>
+                                    <div class="flex-grow flex items-center justify-center">
+                                        <img src="Resource/Feedback3.jpg" alt="Student Feedback" class="w-full h-full object-contain">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Duplicate the same cards to create seamless loop -->
+                            <div class="testimonial-card w-full md:w-1/3 flex-shrink-0 px-3">
+                                <div class="p-8 bg-card-bg rounded-2xl shadow-sm border border-border-color flex flex-col gap-6 h-full">
+                                    <div class="text-primary">
+                                        <span class="material-symbols-outlined text-xl sm:text-2xl">format_quote</span>
+                                    </div>
+                                    <div class="flex-grow flex items-center justify-center">
+                                        <img src="Resource/Feedback1.jpg" alt="Student Feedback" class="w-full h-full object-contain">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-card w-full md:w-1/3 flex-shrink-0 px-3">
+                                <div class="p-8 bg-card-bg rounded-2xl shadow-sm border border-border-color flex flex-col gap-6 h-full">
+                                    <div class="text-primary">
+                                        <span class="material-symbols-outlined text-xl sm:text-2xl">format_quote</span>
+                                    </div>
+                                    <div class="flex-grow flex items-center justify-center">
+                                        <img src="Resource/Feedback2.jpg" alt="Student Feedback" class="w-full h-full object-contain">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-card w-full md:w-1/3 flex-shrink-0 px-3">
+                                <div class="p-8 bg-card-bg rounded-2xl shadow-sm border border-border-color flex flex-col gap-6 h-full">
+                                    <div class="text-primary">
+                                        <span class="material-symbols-outlined text-xl sm:text-2xl">format_quote</span>
+                                    </div>
+                                    <div class="flex-grow flex items-center justify-center">
+                                        <img src="Resource/Feedback3.jpg" alt="Student Feedback" class="w-full h-full object-contain">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Second Row: 3 Testimonials with continuous scroll (right to left) -->
+                    <div class="relative overflow-hidden">
+                        <div class="flex animate-marquee-right-to-left-slow whitespace-nowrap">
+                            <!-- Cards 4-6 to create continuous loop (right to left) -->
+                            <div class="testimonial-card w-full md:w-1/3 flex-shrink-0 px-3">
+                                <div class="p-8 bg-card-bg rounded-2xl shadow-sm border border-border-color flex flex-col gap-6 h-full">
+                                    <div class="text-primary">
+                                        <span class="material-symbols-outlined text-xl sm:text-2xl">format_quote</span>
+                                    </div>
+                                    <div class="flex-grow flex items-center justify-center">
+                                        <img src="Resource/Feedback4.jpg" alt="Student Feedback" class="w-full h-full object-contain">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-card w-full md:w-1/3 flex-shrink-0 px-3">
+                                <div class="p-8 bg-card-bg rounded-2xl shadow-sm border border-border-color flex flex-col gap-6 h-full">
+                                    <div class="text-primary">
+                                        <span class="material-symbols-outlined text-xl sm:text-2xl">format_quote</span>
+                                    </div>
+                                    <div class="flex-grow flex items-center justify-center">
+                                        <img src="Resource/Feedback5.jpg" alt="Student Feedback" class="w-full h-full object-contain">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-card w-full md:w-1/3 flex-shrink-0 px-3">
+                                <div class="p-8 bg-card-bg rounded-2xl shadow-sm border border-border-color flex flex-col gap-6 h-full">
+                                    <div class="text-primary">
+                                        <span class="material-symbols-outlined text-xl sm:text-2xl">format_quote</span>
+                                    </div>
+                                    <div class="flex-grow flex items-center justify-center">
+                                        <img src="Resource/Feedback6.jpg" alt="Student Feedback" class="w-full h-full object-contain">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Duplicate cards 4-6 to create seamless loop -->
+                            <div class="testimonial-card w-full md:w-1/3 flex-shrink-0 px-3">
+                                <div class="p-8 bg-card-bg rounded-2xl shadow-sm border border-border-color flex flex-col gap-6 h-full">
+                                    <div class="text-primary">
+                                        <span class="material-symbols-outlined text-xl sm:text-2xl">format_quote</span>
+                                    </div>
+                                    <div class="flex-grow flex items-center justify-center">
+                                        <img src="Resource/Feedback4.jpg" alt="Student Feedback" class="w-full h-full object-contain">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-card w-full md:w-1/3 flex-shrink-0 px-3">
+                                <div class="p-8 bg-card-bg rounded-2xl shadow-sm border border-border-color flex flex-col gap-6 h-full">
+                                    <div class="text-primary">
+                                        <span class="material-symbols-outlined text-xl sm:text-2xl">format_quote</span>
+                                    </div>
+                                    <div class="flex-grow flex items-center justify-center">
+                                        <img src="Resource/Feedback5.jpg" alt="Student Feedback" class="w-full h-full object-contain">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-card w-full md:w-1/3 flex-shrink-0 px-3">
+                                <div class="p-8 bg-card-bg rounded-2xl shadow-sm border border-border-color flex flex-col gap-6 h-full">
+                                    <div class="text-primary">
+                                        <span class="material-symbols-outlined text-xl sm:text-2xl">format_quote</span>
+                                    </div>
+                                    <div class="flex-grow flex items-center justify-center">
+                                        <img src="Resource/Feedback6.jpg" alt="Student Feedback" class="w-full h-full object-contain">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section class="w-full bg-card-bg py-16 md:py-24" id="contact-us">
+            <div class="max-w-7xl mx-auto px-4 md:px-10 flex flex-col items-center text-center">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-text-main mb-4">ติดต่อเรา</h2>
+                <p class="text-text-muted text-base max-w-2xl mb-8 leading-relaxed">หากน้องๆ สนใจ สามารถติดต่อเข้ามาปรึกษาพูดคุยก่อนได้ค่ะ<br>ทาง QualityDisser พร้อมที่จะช่วยเหลือและให้ข้อมูลเต็มที่ค่ะ<br>เราหวังเป็นอย่างยิ่งว่า เราจะได้เป็นส่วนหนึ่งในการให้บริการกับลูกค้าทุกท่านค่ะ</p>
+                <div class="flex flex-col items-center gap-2">
+                    <div class="flex items-center gap-2 text-text-main text-base font-bold">
+                        <span class="material-symbols-outlined">chat</span>
+                        <span>ติดต่อผ่าน Line</span>
+                    </div>
+                    <div class="text-text-main text-base font-bold">
+                        <span>เพิ่มเพื่อนเลย!!</span>
+                    </div>
+                </div>
+                <div class="mt-8 flex justify-center">
+                    <div class="relative w-64 h-64 rounded-2xl overflow-hidden shadow-2xl shadow-gray-900/20">
+                        <img src="Resource/QRcode.jpg" alt="Contact Graphic" class="w-full h-full object-cover object-center">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        </main>
+
+        <!-- Footer -->
+    <footer id="contact" class="w-full bg-background-dark text-text-muted py-8 sm:py-12">
+        <div class="max-w-7xl mx-auto px-4 md:px-10">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 sm:gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="size-8 bg-primary rounded-lg flex items-center justify-center text-white">
+                            <span class="material-symbols-outlined">school</span>
+                        </div>
+                        <h2 class="text-white text-xl font-bold tracking-tight">QualityDisser</h2>
+                    </div>
+                    <p class="text-sm sm:text-base max-w-md">
+                        One-Stop Dissertation Services | ที่เดียวครบ จบแน่นอน
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold mb-4 text-base sm:text-lg">ลิงก์ด่วน</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#services" class="hover:text-primary transition-colors text-sm sm:text-base block">บริการของเรา</a></li>
+                        <li><a href="#why-us" class="hover:text-primary transition-colors text-sm sm:text-base block">ทำไมต้องเลือกเรา</a></li>
+                        <li><a href="#faq" class="hover:text-primary transition-colors text-sm sm:text-base block">คำถามที่พบบ่อย</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold mb-4 text-base sm:text-lg">ติดต่อเรา</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-sm sm:text-base">
+                            <span class="material-symbols-outlined text-sm sm:text-base flex-shrink-0">email</span>
+                            <span>qualitydisser@gmail.com</span>
+                        </li>
+                        <li class="flex items-center gap-2 text-sm sm:text-base">
+                            <span class="material-symbols-outlined text-sm sm:text-base flex-shrink-0">phone</span>
+                            <span>LineID: qualitydisser</span>
+                        </li>
+                        <li class="flex items-center gap-2 text-sm sm:text-base">
+                            <span class="material-symbols-outlined text-sm sm:text-base flex-shrink-0">location_on</span>
+                            <span>กรุงเทพมหานคร ประเทศไทย</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-6 sm:mt-8 pt-6 sm:pt-8 text-center text-xs sm:text-sm">
+                <p>&copy; 2008 QualityDisser สงวนลิขสิทธิ์ทุกประการ</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function scrollToFooter() {
+            const footer = document.getElementById('contact');
+            footer.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        function scrollToTestimonials() {
+            const testimonials = document.getElementById('testimonials');
+            testimonials.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        function scrollToContactUs() {
+            const contactSection = document.getElementById('contact-us');
+            contactSection.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        // Scroll to top functionality
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Create scroll to top button
+        document.addEventListener('DOMContentLoaded', function() {
+            const scrollTopButton = document.createElement('button');
+            scrollTopButton.innerHTML = '↑';
+            scrollTopButton.classList.add('fixed', 'bottom-4', 'right-4', 'z-50', 'p-3', 'rounded-full', 'bg-primary', 'text-white', 'shadow-lg');
+            scrollTopButton.setAttribute('aria-label', 'Scroll to top');
+            scrollTopButton.id = 'scrollTopButton';
+            scrollTopButton.onclick = scrollToTop;
+
+            // Initially hide the button
+            scrollTopButton.style.display = 'none';
+
+            // Show/hide button based on scroll position
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    scrollTopButton.style.display = 'block';
+                } else {
+                    scrollTopButton.style.display = 'none';
+                }
+            });
+
+            document.body.appendChild(scrollTopButton);
+        });
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>
