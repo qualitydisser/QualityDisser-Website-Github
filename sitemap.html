@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html class="light" lang="th">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>QualityDisser Sitemap | แผนผังเว็บไซต์</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="Resource/QualityDisser_logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Resource/QualityDisser_logo.png">
+    <link rel="shortcut icon" type="image/x-icon" href="Resource/QualityDisser_logo.png">
+    <link rel="mask-icon" href="Resource/QualityDisser_logo.png" color="#306ee8">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&family=Kanit:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#306ee8",
+                        "secondary": "#636f88",
+                        "accent": "#f59e0b",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#111621",
+                        "text-main": "#111318",
+                        "text-muted": "#636f88",
+                        "card-bg": "#ffffff",
+                        "border-color": "#e5e7eb"
+                    },
+                    fontFamily: {
+                        "display": ["Kanit", "sans-serif"],
+                        "body": ["Prompt", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        @keyframes marqueeRightToLeft {
+            0% {
+                transform: translateX(0%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        @keyframes marqueeLeftToRight {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        @keyframes marqueeRightToLeftSlow {
+            0% {
+                transform: translateX(0%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .animate-marquee-right-to-left {
+            animation: marqueeRightToLeft 20s linear infinite;
+        }
+
+        .animate-marquee-left-to-right {
+            animation: marqueeLeftToRight 20s linear infinite;
+        }
+
+        .animate-marquee-right-to-left-slow {
+            animation: marqueeRightToLeftSlow 25s linear infinite;
+        }
+        
+        .sitemap-section {
+            padding: 2rem 0;
+        }
+        
+        .sitemap-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #111318;
+        }
+        
+        .sitemap-subtitle {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 1.5rem 0 1rem 0;
+            color: #306ee8;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+        }
+        
+        .sitemap-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .sitemap-list li {
+            margin: 0.75rem 0;
+            padding: 0.5rem 0;
+        }
+        
+        .sitemap-link {
+            display: block;
+            padding: 0.75rem;
+            background-color: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            color: #111318;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .sitemap-link:hover {
+            background-color: #f0f9ff;
+            border-color: #306ee8;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        
+        .sitemap-link .material-symbols-outlined {
+            vertical-align: middle;
+            margin-right: 0.75rem;
+            color: #306ee8;
+        }
+        
+        .sitemap-intro {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+            border-radius: 0.5rem;
+        }
+        
+        .sitemap-intro p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+    </style>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-background-light dark:bg-background-dark font-body text-text-main antialiased">
+    <!-- Top Navigation -->
+    <header class="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-md border-b border-[#f0f2f4]">
+        <div class="px-4 md:px-10 py-3 max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="size-8 bg-primary rounded-lg flex items-center justify-center text-white">
+                    <span class="material-symbols-outlined">inventory</span>
+                </div>
+                <h2 class="text-text-main text-xl font-bold tracking-tight">QualityDisser Sitemap</h2>
+            </div>
+            <nav class="hidden md:flex items-center gap-8">
+                <a class="nav-link text-text-main text-sm font-medium hover:text-primary transition-colors" href="index.html">หน้าหลัก</a>
+                <a class="nav-link text-text-main text-sm font-medium hover:text-primary transition-colors" href="#main-sections">ส่วนหลัก</a>
+                <a class="nav-link text-text-main text-sm font-medium hover:text-primary transition-colors" href="#services">บริการ</a>
+                <a class="nav-link text-text-main text-sm font-medium hover:text-primary transition-colors" href="#about">เกี่ยวกับเรา</a>
+            </nav>
+            <div class="flex gap-3">
+                <a href="index.html" class="cursor-pointer items-center justify-center rounded-lg h-9 px-4 bg-primary text-white text-sm font-bold shadow-md hover:bg-primary/90 transition-colors flex gap-2">
+                    <span class="material-symbols-outlined text-[18px]">home</span>
+                    <span>กลับหน้าหลัก</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex flex-col items-center w-full">
+        <!-- Sitemap Hero Section -->
+        <section class="w-full max-w-7xl px-4 md:px-10 py-12 md:py-20">
+            <div class="flex flex-col gap-6">
+                <div class="flex flex-col gap-4 text-center">
+                    <span class="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold w-fit mx-auto">แผนผังเว็บไซต์</span>
+                    <h1 class="text-text-main text-3xl sm:text-4xl md:text-5xl font-black leading-[1.15] tracking-tight">
+                        แผนผังเว็บไซต์ <span class="gradient-text">QualityDisser</span>
+                    </h1>
+                    <p class="text-text-muted text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
+                        ค้นหาและนำทางไปยังทุกส่วนของเว็บไซต์ของเราอย่างง่ายดาย
+                    </p>
+                </div>
+                
+                <div class="sitemap-intro mt-8">
+                    <p class="text-center text-text-main">
+                        ยินดีต้อนรับสู่แผนผังเว็บไซต์ของ QualityDisser ซึ่งเป็นบริการรับทำ Dissertation ภาษาอังกฤษ โดยเฉพาะ ที่นี่คุณสามารถค้นหาทุกหน้าของเว็บไซต์ของเราได้อย่างง่ายดาย 
+                        เพื่อให้คุณสามารถเข้าถึงข้อมูลที่คุณต้องการได้อย่างรวดเร็ว
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Sections -->
+        <section class="w-full bg-card-bg py-16 md:py-24 sitemap-section" id="main-sections">
+            <div class="max-w-7xl mx-auto px-4 md:px-10 flex flex-col gap-10">
+                <div class="flex flex-col items-center text-center gap-3">
+                    <span class="text-primary font-bold text-sm sm:text-base tracking-wide uppercase">ส่วนหลักของเว็บไซต์</span>
+                    <h2 class="sitemap-title">ส่วนหลักของเว็บไซต์</h2>
+                    <p class="text-text-muted text-base max-w-2xl">สำรวจส่วนต่าง ๆ ของเว็บไซต์ QualityDisser</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <a href="index.html#services" class="sitemap-link">
+                        <span class="material-symbols-outlined">menu_book</span>
+                        บริการของเรา
+                    </a>
+                    
+                    <a href="index.html#why-us" class="sitemap-link">
+                        <span class="material-symbols-outlined">workspace_premium</span>
+                        ทำไมต้องเลือกเรา
+                    </a>
+                    
+                    <a href="index.html#faq" class="sitemap-link">
+                        <span class="material-symbols-outlined">quiz</span>
+                        คำถามที่พบบ่อย
+                    </a>
+                    
+                    <a href="index.html#testimonials" class="sitemap-link">
+                        <span class="material-symbols-outlined">chat_bubble</span>
+                        ความคิดเห็นจากนักศึกษา
+                    </a>
+                    
+                    <a href="index.html#contact-us" class="sitemap-link">
+                        <span class="material-symbols-outlined">chat</span>
+                        ติดต่อเรา
+                    </a>
+                    
+                    <a href="sitemap.html" class="sitemap-link">
+                        <span class="material-symbols-outlined">inventory</span>
+                        แผนผังเว็บไซต์
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="w-full bg-background-light dark:bg-background-dark py-16 md:py-24 sitemap-section" id="services">
+            <div class="max-w-7xl mx-auto px-4 md:px-10 flex flex-col gap-10">
+                <div class="flex flex-col items-center text-center gap-3">
+                    <span class="text-primary font-bold text-sm sm:text-base tracking-wide uppercase">บริการของเรา</span>
+                    <h2 class="sitemap-title">บริการทางวิชาการ</h2>
+                    <p class="text-text-muted text-base max-w-2xl">บริการที่ครอบคลุมความต้องการทางวิชาการของคุณ</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <a href="index.html#services" class="sitemap-link">
+                        <span class="material-symbols-outlined">menu_book</span>
+                        Research Proposal
+                    </a>
+                    
+                    <a href="index.html#services" class="sitemap-link">
+                        <span class="material-symbols-outlined">description</span>
+                        Dissertation and Assignment
+                    </a>
+                    
+                    <a href="index.html#services" class="sitemap-link">
+                        <span class="material-symbols-outlined">analytics</span>
+                        Data Analysis
+                    </a>
+                    
+                    <a href="index.html#services" class="sitemap-link">
+                        <span class="material-symbols-outlined">check_circle</span>
+                        Editing and Proofreading
+                    </a>
+                    
+                    <a href="index.html#services" class="sitemap-link">
+                        <span class="material-symbols-outlined">edit_note</span>
+                        Academic Presentation
+                    </a>
+                    
+                    <a href="index.html#services" class="sitemap-link">
+                        <span class="material-symbols-outlined">psychology</span>
+                        Consultation
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="w-full bg-card-bg py-16 md:py-24 sitemap-section" id="about">
+            <div class="max-w-7xl mx-auto px-4 md:px-10 flex flex-col gap-10">
+                <div class="flex flex-col items-center text-center gap-3">
+                    <span class="text-primary font-bold text-sm sm:text-base tracking-wide uppercase">เกี่ยวกับเรา</span>
+                    <h2 class="sitemap-title">ข้อมูลเพิ่มเติม</h2>
+                    <p class="text-text-muted text-base max-w-2xl">เรียนรู้เพิ่มเติมเกี่ยวกับ QualityDisser</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <a href="index.html#why-us" class="sitemap-link">
+                        <span class="material-symbols-outlined">workspace_premium</span>
+                        ความเชี่ยวชาญของเรา
+                    </a>
+                    
+                    <a href="index.html#why-us" class="sitemap-link">
+                        <span class="material-symbols-outlined">shield</span>
+                        ความปลอดภัยและความเป็นส่วนตัว
+                    </a>
+                    
+                    <a href="index.html#why-us" class="sitemap-link">
+                        <span class="material-symbols-outlined">schedule</span>
+                        การส่งงานตรงเวลา
+                    </a>
+                    
+                    <a href="index.html#why-us" class="sitemap-link">
+                        <span class="material-symbols-outlined">psychology</span>
+                        ที่ปรึกษาผู้เชี่ยวชาญ
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="w-full bg-background-light dark:bg-background-dark py-16 md:py-24 sitemap-section">
+            <div class="max-w-7xl mx-auto px-4 md:px-10 flex flex-col gap-10">
+                <div class="flex flex-col items-center text-center gap-3">
+                    <span class="text-primary font-bold text-sm sm:text-base tracking-wide uppercase">คำถามที่พบบ่อย</span>
+                    <h2 class="sitemap-title">คำถามที่พบบ่อย (FAQ)</h2>
+                    <p class="text-text-muted text-base max-w-2xl">คำตอบสำหรับคำถามที่พบบ่อยเกี่ยวกับบริการของเรา</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <a href="index.html#faq" class="sitemap-link">
+                        <span class="material-symbols-outlined">lock</span>
+                        บริการนี้เป็นความลับหรือไม่?
+                    </a>
+                    
+                    <a href="index.html#faq" class="sitemap-link">
+                        <span class="material-symbols-outlined">engineering</span>
+                        ใครจะเป็นผู้ทำงานในงานที่ได้รับมอบหมายของฉัน?
+                    </a>
+                    
+                    <a href="index.html#faq" class="sitemap-link">
+                        <span class="material-symbols-outlined">grade</span>
+                        รับประกันเกรดหรือไม่?
+                    </a>
+                    
+                    <a href="index.html#faq" class="sitemap-link">
+                        <span class="material-symbols-outlined">edit</span>
+                        ถ้าฉันต้องการเปลี่ยนแปลงแก้ไขงานจะเกิดอะไรขึ้น?
+                    </a>
+                    
+                    <a href="index.html#faq" class="sitemap-link">
+                        <span class="material-symbols-outlined">payments</span>
+                        ฉันจะชำระเงินอย่างไร?
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="w-full bg-card-bg py-16 md:py-24 sitemap-section">
+            <div class="max-w-7xl mx-auto px-4 md:px-10 flex flex-col items-center text-center">
+                <h2 class="sitemap-title">ติดต่อเรา</h2>
+                <p class="text-text-muted text-base max-w-2xl mb-8 leading-relaxed">
+                    หากน้องๆ สนใจ สามารถติดต่อเข้ามาปรึกษาพูดคุยก่อนได้ค่ะ<br>
+                    ทาง QualityDisser พร้อมที่จะช่วยเหลือและให้ข้อมูลเต็มที่ค่ะ
+                </p>
+                
+                <div class="flex flex-col md:flex-row gap-6 w-full max-w-2xl">
+                    <a href="mailto:qualitydisser@gmail.com" class="sitemap-link">
+                        <span class="material-symbols-outlined">email</span>
+                        qualitydisser@gmail.com
+                    </a>
+                    
+                    <a href="https://line.me/ti/p/qualitydisser" target="_blank" class="sitemap-link">
+                        <span class="material-symbols-outlined">chat</span>
+                        LineID: qualitydisser
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="w-full bg-background-dark text-text-muted py-8 sm:py-12">
+        <div class="max-w-7xl mx-auto px-4 md:px-10">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 sm:gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="size-8 bg-primary rounded-lg flex items-center justify-center text-white">
+                            <span class="material-symbols-outlined">school</span>
+                        </div>
+                        <h2 class="text-white text-xl font-bold tracking-tight">QualityDisser</h2>
+                    </div>
+                    <p class="text-sm sm:text-base max-w-md">
+                        One-Stop Dissertation Services | ที่เดียวครบ จบแน่นอน
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold mb-4 text-base sm:text-lg">ลิงก์ด่วน</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-primary transition-colors text-sm sm:text-base block">หน้าหลัก</a></li>
+                        <li><a href="#main-sections" class="hover:text-primary transition-colors text-sm sm:text-base block">ส่วนหลัก</a></li>
+                        <li><a href="#services" class="hover:text-primary transition-colors text-sm sm:text-base block">บริการ</a></li>
+                        <li><a href="#about" class="hover:text-primary transition-colors text-sm sm:text-base block">เกี่ยวกับเรา</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold mb-4 text-base sm:text-lg">ติดต่อเรา</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-sm sm:text-base">
+                            <span class="material-symbols-outlined text-sm sm:text-base flex-shrink-0">email</span>
+                            <span>qualitydisser@gmail.com</span>
+                        </li>
+                        <li class="flex items-center gap-2 text-sm sm:text-base">
+                            <span class="material-symbols-outlined text-sm sm:text-base flex-shrink-0">phone</span>
+                            <span>LineID: qualitydisser</span>
+                        </li>
+                        <li class="flex items-center gap-2 text-sm sm:text-base">
+                            <span class="material-symbols-outlined text-sm sm:text-base flex-shrink-0">location_on</span>
+                            <span>กรุงเทพมหานคร ประเทศไทย</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-6 sm:mt-8 pt-6 sm:pt-8 text-center text-xs sm:text-sm">
+                <p>&copy; 2008 QualityDisser สงวนลิขสิทธิ์ทุกประการ | แผนผังเว็บไซต์</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Smooth scrolling for navigation links
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add smooth scrolling to anchor links
+            const links = document.querySelectorAll('a[href^="#"]');
+            for (const link of links) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    if (targetSection) {
+                        window.scrollTo({
+                            top: targetSection.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            }
+
+            // Add animation to elements when they come into view
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe elements with fade-in and slide-up classes
+            const animatedElements = document.querySelectorAll('.fade-in, .slide-up');
+            animatedElements.forEach(el => {
+                observer.observe(el);
+            });
+        });
+
+        // Function to handle form submissions (if any)
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            // Form handling logic would go here
+            console.log('Form submitted');
+        }
+
+        // Utility function to check if an element is in viewport
+        function isElementInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>
